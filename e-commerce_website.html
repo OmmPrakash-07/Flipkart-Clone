@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="e-commerce_website.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .container {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            transform: translate(0, -11px) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                    alt="Flipkart" class="logo">
+
+                <div class="logo-text">
+                    <span class="explore">Explore </span>
+                    <span class="plus">Plus <img
+                            src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png"
+                            alt="Plus">
+                    </span>
+                </div>
+            </div>
+
+            <div class="search-section">
+                <input type="text" placeholder="Search for products, brands and more">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <nav class="nav-links">
+                <button class="login-btn">Login</button>
+                <button class="nav-item cart">
+                    <i class="fas fa-shopping-cart"></i> Cart
+                </button>
+                <div class="container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="heading">
+        <a href="#" class="head">Home</a>
+        <a href="#" class="head">Products</a>
+        <a href="#" class="head">About</a>
+        <a href="#" class="head">Contact</a>
+    </div>
+
+    <section class="categories">
+        <div class="categories-container">
+            <div class="category-item">
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png" class="zoom"
+                    alt="Grocery">
+                <p>Grocery</p>
+
+                <div class="submenu">
+                    <a href="#">Rice & Grains</a>
+                    <a href="#">Flours & Sooji</a>
+                    <a href="#">Edible Oils</a>
+                    <a href="#">Spices & Masalas</a>
+                    <a href="#">Dals & Pulses</a>
+                    <a href="#">Dry Fruits</a>
+                    <a href="#">Snacks & Beverages</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png" class="zoom"
+                    alt="Mobiles">
+
+                <div class="submenu">
+                    <a href="#">Samsung Galaxy S24 Ultra</a>
+                    <a href="#">iPhone 15 Pro Max</a>
+                    <a href="#">OnePlus 12R</a>
+                    <a href="#">Redmi Note 13 Pro+</a>
+                    <a href="#">Realme Narzo 70</a>
+                    <a href="#">Nothing Phone (2a)</a>
+                </div>
+                <p>Mobiles</p>
+            </div>
+            <div class="category-item">
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png" class="zoom"
+                    alt="Fashion">
+
+                <div class="submenu">
+                    <a href="#">Men's T-Shirts</a>
+                    <a href="#">Men's Jeans</a>
+                    <a href="#">Women's Dresses</a>
+                    <a href="#">Sarees</a>
+                    <a href="#">Kids Wear</a>
+                    <a href="#">Footwear</a>
+                    <a href="#">Watches</a>
+                </div>
+                <p>Fashion</p>
+            </div>
+            <div class="category-item">
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/69c6589653afdb9a.png" class="zoom"
+                    alt="Electronics">
+
+                <div class="submenu">
+                    <a href="#">Smartphones</a>
+                    <a href="#">Laptops</a>
+                    <a href="#">Smart Watches</a>
+                    <a href="#">DSLR Cameras</a>
+                    <a href="#">Power Banks</a>
+                    <a href="#">Smart TVs</a>
+                    <a href="#">Headphones</a>
+                </div>
+                <p>Electronics</p>
+            </div>
+            <div class="category-item">
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg" class="zoom"
+                    alt="Home">
+
+                <div class="submenu">
+                    <a href="#">Beds</a>
+                    <a href="#">Sofas</a>
+                    <a href="#">Wall Clocks</a>
+                    <a href="#">Photo Frames</a>
+                    <a href="#">Curtains</a>
+                    <a href="#">Bed Sheets</a>
+                    <a href="#">Decorative Lamps</a>
+                </div>
+                <p>Home</p>
+            </div>
+            <div class="category-item">
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png" class="zoom"
+                    alt="Appliances">
+                <p>Appliances</p>
+
+                <div class="submenu">
+                    <a href="#">Refrigerators</a>
+                    <a href="#">Washing Machines</a>
+                    <a href="#">Air Conditioners</a>
+                    <a href="#">Microwave Ovens</a>
+                    <a href="#">Mixer Grinders</a>
+                    <a href="#">Electric Kettles</a>
+                    <a href="#">Trimmers</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/71050627a56b4693.png" class="zoom"
+                    alt="Travel">
+                <p>Travel</p>
+
+                <div class="submenu">
+                    <a href="#">Trolley Bags</a>
+                    <a href="#">Backpacks</a>
+                    <a href="#">Laptop Bags</a>
+                    <a href="#">Neck Pillows</a>
+                    <a href="#">Luggage Covers</a>
+                    <a href="#">Bike Accessories</a>
+                    <a href="#">Car Chargers</a>
+                </div>
+            </div>
+            <div class="category-item">
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png" class="zoom"
+                    alt="Toys">
+                <p>Toys</p>
+
+                <div class="submenu">
+        <strong>🚗 Vehicle & Action Toys</strong>
+        <a href="#">Remote Control Cars</a>
+        <a href="#">Hot Wheels</a>
+        <a href="#">Action Figures</a>
+        <a href="#">Transformers</a>
+
+        <hr>
+
+        <strong>🎲 Educational & Fun</strong>
+        <a href="#">Puzzle Games</a>
+        <a href="#">Board Games</a>
+        <a href="#">Stacking & Building Blocks</a>
+        <a href="#">Flash Cards</a>
+
+        <hr>
+
+        <strong>🧒 Age-Based Toys</strong>
+        <a href="#">Toys for 0–2 Years</a>
+        <a href="#">Toys for 3–5 Years</a>
+        <a href="#">Toys for 6–8 Years</a>
+        <a href="#">Toys for 9+ Years</a>
+
+        <hr>
+
+        <strong>🎁 Other Popular Toys</strong>
+        <a href="#">Stuffed Animals</a>
+        <a href="#">Toy Guns & Nerf Blasters</a>
+        <a href="#">Doll Houses</a>
+        <a href="#">Slime & Putty</a>
+    </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="banner">
+        <img src="Summer.png" alt="Summer Super Sale" />
+    </div>
+
+    <h2>Best of Electronics </h2>
+    <div class="product-container">
+        <div class="content-row">
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/w/t/q/-original-imagr4t8zuq2wzhe.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">OnePlus Nord Buds 2r in Ear Earbuds with Dual ...</div>
+
+                <div>
+                    <span class="off">&#8595; 26%</span>
+                    <span class="price">₹1,699</span>
+                    <span class="old-price">₹2,299</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/e/n/o/-original-imaghxh7rrdrnbsy.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">Apple Watch Ultra 49mm GPS + ... </div>
+
+                <div>
+                    <span class="off">&#8595; 7%</span>
+                    <span class="price">₹82,999</span>
+                    <span class="old-price">₹89,900</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="badge" id="choice">Flipkart's Choice</div>
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/x/q/b/-original-imah2d55jusy9p9t.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">boAt Stone 350 Pro/358 Pro with Dynamic RGB LED ...</div>
+
+                <div>
+                    <span class="off">&#8595; 67%</span>
+                    <span class="price">₹1,599</span>
+                    <span class="old-price">₹4,990</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="badge">Best Seller</div>
+
+                <img src="https://rukminim2.flixcart.com/image/312/312/kx9as280/monitor/o/n/a/predator-cg437k-4k-ultra-hd-42-5-um-mc7si-p01-acer-original-imag9r99gdhyazn6.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">Acer Predator 107.95 cm (42.5 ...</div>
+
+                <div>
+                    <span class="off">&#8595; 67%</span>
+                    <span class="price">₹43,549</span>
+                    <span class="old-price">₹1,32,700</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/k0bbb0w0pkrrdj/printer-refurbished/k/g/j/b-ink-tank-l130-epson-original-imafk8ffzjkgefyf.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">Epson L130 Single Function Inkjet Pri ...</div>
+
+                <div>
+                    <span class="off">&#8595; 13%</span>
+                    <span class="price">₹9,499</span>
+                    <span class="old-price">₹10,999</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shaver/b/x/n/ph-svr-s1151-03-philips-original-imah243ehs64fzxw.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">PHILIPS S1151/03 Shaver For Men (Blu ...</div>
+
+                <div>
+                    <span class="off">&#8595; 15%</span>
+                    <span class="price">₹2,248</span>
+                    <span class="old-price">₹2,649</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/external-hard-drive/ssd/q/1/y/sdssde61-1t00-g25m-sandisk-original-imagsgpzfjagzdqf.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">SanDisk 4 TB ...</div>
+
+                <div>
+                    <span class="off">&#8595; 35%</span>
+                    <span class="price">₹30,999</span>
+                    <span class="old-price">₹47,800</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/312/312/l5fnhjk0/dslr-camera/g/t/7/eos-r10-24-2-r10-canon-original-imagg4y52cybasdr.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">Canon EOS R10 Mirrorless Camera ...</div>
+
+                <div>
+                    <span class="off">&#8595; 10%</span>
+                    <span class="price">₹82,990</span>
+                    <span class="old-price">₹92,995</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <h2>Beauty, Food, Toys & more</h2>
+    <div class="product-container">
+        <div class="content-row">
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/action-figure/y/j/e/3-dragon-ball-z-goku-supere-saiyan-anime-action-figure-for-home-original-imagm874uzfvdfkf.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">OFFO Dragon Ball Z Goku Supere Saiyan Anime ...</div>
+
+                <div>
+                    <span class="off">&#8595; 55%</span>
+                    <span class="price">₹890</span>
+                    <span class="old-price">₹1,999</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="badge">Best Seller</div>
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/nut-dry-fruit/g/q/z/250-mix-dry-fruit-panchmeva-250gm-jar-1-mason-jar-nature-aahar-original-imah8hb3k5syspyq.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">Nature Aahar Mix Dry Fruit | Panchmeva | 250GM | JAR | Almonds ... </div>
+
+                <div>
+                    <span class="off">&#8595; 73%</span>
+                    <span class="price">₹268</span>
+                    <span class="old-price">₹999</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="badge" id="choice">Flipkart's Choice</div>
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/treadmill/a/z/y/ft98-steel-3hp-peak-with-max-weight-100kg-heartrate-sensor-for-original-imahd8ckbbhxf6kf.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">FITKIT by Cult FT98 Steel (3HP Peak) with Max Weight 100kg & ...</div>
+
+                <div>
+                    <span class="off">&#8595; 66%</span>
+                    <span class="price">₹13,699</span>
+                    <span class="old-price">₹41,000</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-vitamin-supplement/2/5/l/60-acv-apple-cider-vinegar-effervescent-tablets-for-weight-original-imahcd6xhb4ffjzm.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">The Plant Fix Plix ACV Apple Cider Vinegar Effervescent Tablets For Weight ...</div>
+
+                <div>
+                    <span class="price">₹1,199</span>
+                    <span class="old-price">₹1,152</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/l2qhjm80/stuffed-toy/2/t/i/big-size-funny-unicorn-stuffed-animal-plush-toy-100-ozee-original-imagey35r9tgahf8.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">OZEE Medium Size Funny Unicorn Stuffed Animal ...</div>
+
+                <div>
+                    <span class="off">&#8595; 76%</span>
+                    <span class="price">₹350</span>
+                    <span class="old-price">₹1,499</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/khkvukw0-0/pen/6/s/c/8901765126245-hauser-original-imafxkck3g75whwf.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">HAUSER XO 0.6 mm Tumbler | Sleek Body & Minimali ...</div>
+
+                <div>
+                    <span class="off">&#8595; 24%</span>
+                    <span class="price">₹379</span>
+                    <span class="old-price">₹500</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/lamination-machine/a/w/f/12-59-39-37-lam-0001-frontech-original-imahd2hmhdzabgd3.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">Frontech LAM-0001 A3 Heavy Duty Laminator | Forward & Reverse </div>
+
+                <div>
+                    <span class="off">&#8595; 54%</span>
+                    <span class="price">₹3,168</span>
+                    <span class="old-price">₹7,000</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shaver/b/x/n/ph-svr-s1151-03-philips-original-imah243ehs64fzxw.jpeg?q=70"
+                    alt="product_img" class="product-img" />
+
+                <div class="title">PHILIPS S1151/03 Shaver For Men (Blu ...</div>
+
+                <div>
+                    <span class="off">&#8595; 15%</span>
+                    <span class="price">₹2,248</span>
+                    <span class="old-price">₹2,649</span>
+                </div>
+                <div class="rating">⭐⭐⭐⭐</div>
+
+                <div class="btn-group">
+                    <button class="btn">Buy Now</button>
+                    <button class="btn">Add to cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section class="say">
+
+        <center>
+            <h1>What Our Customers Say</h1>
+            <p>Our customers love shopping with us — here’s what they have to say:</p>
+        </center>
+
+        <section class="testimonial-section">
+            <div class="testimonial-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7rDJmQav4ekgedna3nF7XY8XzT4HSiAuRa6DCHyXgnmaRhMS1aScm3yLcjIPajS2SUUttqQJ3snFoyB2XmUcfpg"
+                    alt="Hrithik Roshan">
+                <div class="stars">★★★★★☆</div>
+                <p>"Excellent customer service, very helpful and responsive."</p>
+                <h4>Hrithik Roshan</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="https://a10.gaanacdn.com/gn_img/artists/9MAWe7KyJe/MAWeol8zKy/size_m_1732262732.jpg"
+                    alt="Shraddha Kapoor">
+                <div class="stars">★★★★★☆</div>
+                <p>"Product exceeded my expectations, highly recommend!"</p>
+                <h4>Shraddha Kapoor</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="https://s.yimg.com/ny/api/res/1.2/NXrXkLbOzEuednxcXWYqDA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02OTk-/https://media.zenfs.com/en/comingsoon_net_477/d7f8f5f5e6b55c2f97d3a162a091b968"
+                    alt="Robert Downey Jr.">
+                <div class="stars">★★★★★☆</div>
+                <p>"More payment options would be great, currently limited."</p>
+                <h4>Robert Downey Jr.</h4>
+            </div>
+        </section>
+    </section>
+
+
+    <div class="chatbox">
+        <div class="chatbot">
+            <img src="chatbot.png" alt="chat-bot" class="chatboticon">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>ABOUT</h4>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Flipkart Stories</li>
+                    <li>Press</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>HELP</h4>
+                <ul>
+                    <li>Payments</li>
+                    <li>Shipping</li>
+                    <li>Cancellation & Returns</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>POLICY</h4>
+                <ul>
+                    <li>Return Policy</li>
+                    <li>Terms Of Use</li>
+                    <li>Security</li>
+                    <li>Privacy</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>SOCIAL</h4>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+
+                    <a href="https://www.instagram.com/genius_omm?igsh=bGRrM3hzcTEydmZj"> <i class="fab fa-instagram"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2023 Flipkart Clone. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+
+</body>
+
+</html>
