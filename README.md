@@ -46,7 +46,10 @@ Flipkart-Clone-main/
 
 ## 📸 Screenshots
 
-_Add screenshots of your homepage or sections here (optional)._
+![image](https://github.com/user-attachments/assets/9d53bc15-e5bc-45af-ba3a-4a8e96166a26)
+![image](https://github.com/user-attachments/assets/40a3cf66-59c8-4eab-a9e4-ec9e76366fc5)
+![image](https://github.com/user-attachments/assets/acc82ad1-3a69-492d-8e8d-f443888813ca)
+
 
 ---
 
