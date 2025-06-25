@@ -31,8 +31,8 @@ Flipkart-Clone-main/
 
 ## 🧰 Tech Stack
 
-- **HTML5**
-- **CSS3**
+- **HTML**
+- **CSS**
 
 ---
 
